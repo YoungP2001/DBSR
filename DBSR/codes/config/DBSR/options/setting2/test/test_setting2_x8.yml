@@ -1,0 +1,37 @@
+name: DBSRx4_setting2
+suffix: ~  # add suffix to saved images
+model: blind
+distortion: sr
+scale: 8
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [2]
+pca_matrix_path: ../../../pca_matrix/DBSR/pca_aniso_matrix_x4.pth
+
+datasets:
+
+  test1:
+    name: Chikusei_8blur2
+    mode: LQGT
+    dataroot_LQGT: /home/lwd/Dataset_yp/HSISR/Chikusei/8/Chikusei_x8_blur2/tests/
+#    dataroot_LQGT: /data/yp/HSI/Data/Cave/Val/32/4_blur/
+
+
+#### network structures
+network_G:
+  which_model_G: DBSR
+  setting:
+    nf: 64
+    nb: 5 #5
+    ng: 3  #3
+    input_para: 256
+    kernel_size: 21
+    in_nc: 128 #????????,?3???31
+    n_subs: 8 # the sub band in each group
+    n_ovls: 2 # the number of overlap
+    n_SSB_blocks: 3
+    final_feats: 128
+    ker_ex_numblock: 3
+
+#### path
+path:
+  pretrain_model_G: /home/lwd/code_yp/DBSR-SR/experiments/DBSR/DBSRx4_setting2/models/7000_G.pth
