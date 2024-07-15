@@ -1,7 +1,7 @@
 # Deep-Blind-Super-Resolution-for-Hyperspectral-Images
 Deep Blind Super-Resolution for Hyperspectral Images
 
-
+![Alt Text](DBSR/figs/Quicker_20240715_164741.png)
 
 ### Train：
 
