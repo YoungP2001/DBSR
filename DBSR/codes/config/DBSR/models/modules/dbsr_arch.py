@@ -219,7 +219,7 @@ class BranchUnit(nn.Module):
         self.feature_block = make_layer(basic_block, 3)  # 3???
 
         self.head1 = nn.Conv2d(nf, nf2, 3, 1, 1)  # CR,?????,??,?Gy,???16=64/4
-        self.head2 = CLS(nf, reduction=reduction)  #
+        self.head2 = DWDN(nf, reduction=reduction)  #
 
         self.body = DPCAG(nf, nf2, 3, 3, nb)
 
