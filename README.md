@@ -1,6 +1,6 @@
 # Deep-Blind-Super-Resolution-for-Hyperspectral-Images
 Deep Blind Super-Resolution for Hyperspectral Images 
-Accepted by Pattern Recognition
+accepted by Pattern Recognition
 
 ![Alt Text](DBSR/figs/Quicker_20240715_164741.png)
 
